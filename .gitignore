@@ -1,6 +1,7 @@
 # Datos crudos: NO se versionan en GitHub (pesan GB y superan el limite de 100 MB/archivo).
 # La reproducibilidad se garantiza con el codigo + las fuentes de descarga documentadas.
 data/
+entrega_ecuador_cuantificado_2026.zip
 
 # macOS
 .DS_Store
@@ -15,3 +16,7 @@ venv/
 # Salidas temporales
 outputs/
 *.tmp
+
+# Archivos de datos > 100 MB (no caben en GitHub; van en el ZIP de entrega)
+ERCE_2019_QA6.sav
+BDDenemdu_personas_2023_anual.sav

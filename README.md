@@ -7,7 +7,7 @@
 
 Entregable principal: [`education_ecuador_analysis.ipynb`](education_ecuador_analysis.ipynb) — un
 Jupyter Notebook narrativo que explora, limpia y analiza datos oficiales de Ecuador e
-internacionales, y genera ocho visualizaciones (carpeta [`figuras/`](figuras/)).
+internacionales, y genera nueve visualizaciones (carpeta [`figuras/`](figuras/)).
 
 ---
 
@@ -82,7 +82,7 @@ Por transparencia, se documentan las fuentes que se revisaron pero **no** entrar
 ## Qué hice (resultados)
 
 El notebook recorre cuatro partes: **(1)** exploración y limpieza de cada fuente, **(2)** análisis
-por relaciones, **(3)** visualizaciones y **(4)** validación metodológica. Las ocho figuras:
+por relaciones, **(3)** visualizaciones y **(4)** validación metodológica. Las nueve figuras:
 
 ### 1. ¿Qué desigualdades pesan más en el aprendizaje?
 El territorio (28.6 pts entre la mejor y peor provincia) y el origen socioeconómico (20.9 pts)
@@ -127,6 +127,12 @@ tiene menos alumnos por docente.
 
 ![Ecuador vs el mejor país](figuras/08_ecuador_vs_mejor.png)
 
+### 9. Gráfico de cierre — el tamaño de la brecha
+Ecuador (8.7 LAYS) supera levemente al promedio regional (7.8), pero queda por debajo de Chile
+(9.4) y lejos de la frontera mundial (~11.7): la distancia que faltaría por cerrar.
+
+![Síntesis de la brecha](figuras/09_sintesis_brecha.png)
+
 **Narrativa:** Ecuador no solo tiene menor desempeño que los países líderes de la región, sino
 también mayores desigualdades estructurales internas (socioeconómicas y territoriales). Estas
 diferencias se asocian con menores oportunidades futuras (acceso a educación superior, ingreso).
@@ -140,9 +146,10 @@ concurso-visualizador/
 ├── education_ecuador_analysis.ipynb   # Notebook principal (entregable)
 ├── requirements.txt                   # Dependencias de Python
 ├── README.md
-├── figuras/                           # 8 visualizaciones exportadas (PNG)
-└── data/                              # Datos (NO incluidos en el repositorio; ver abajo)
-    ├── ineval-ser-estudiante/
+├── figuras/                           # 9 visualizaciones exportadas (PNG)
+└── data_repro/                        # Datos para reproducir (solo lo que usa el notebook)
+    ├── api_cache.csv                   # Valores de las APIs (permite ejecutar sin internet)
+    ├── ineval-ser-estudiante/2023-2024/
     ├── erce-2019/sav/
     ├── enemdu/
     ├── owid/
@@ -152,18 +159,22 @@ concurso-visualizador/
 
 ## Cómo reproducir
 
-1. **Instalar dependencias** (Python 3.10+):
+Este proyecto es **autocontenido**: se entrega como un único ZIP que ya incluye los datos
+(`data_repro/`), las figuras y el código. No requiere descargas manuales.
+
+1. Descomprimir el ZIP y abrir la carpeta.
+2. **Instalar dependencias** (Python 3.10+):
    ```bash
    pip install -r requirements.txt
    ```
-2. **Colocar los datos.** La carpeta `data/` no se versiona en este repositorio por su tamaño
-   (>1 GB) y por las licencias de cada fuente. Los archivos se entregan aparte (ZIP / enlace) con la
-   estructura indicada arriba; los enlaces oficiales de descarga están en la sección _Fuentes_.
-3. **Ejecutar** el notebook desde la raíz del proyecto (Run All). Las rutas son relativas a `data/`.
-4. **Conexión a internet:** las celdas de Banco Mundial y UNESCO-UIS consultan sus APIs en vivo.
+3. **Ejecutar** el notebook desde esa carpeta (Run All). Las rutas son relativas a `data_repro/`.
 
-> Las figuras de `figuras/` ya están generadas, así que el análisis puede revisarse sin ejecutar el
-> notebook. Al ejecutarlo, se regeneran automáticamente.
+> **Funciona sin internet.** Las celdas de Banco Mundial y UNESCO-UIS intentan la API en vivo y, si
+> no hay conexión, leen los valores de `data_repro/api_cache.csv`. Las figuras de `figuras/` ya están
+> generadas, así que el análisis puede revisarse incluso sin ejecutar el notebook.
+
+`data_repro/` contiene solo las columnas/archivos que el notebook usa (para mantener el bundle
+ligero); los datos originales completos se descargan de las fuentes oficiales citadas más abajo.
 
 ## Limitaciones
 
