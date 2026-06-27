@@ -1,0 +1,7 @@
+# Dependencias para ejecutar education_ecuador_analysis.ipynb
+# Instalar con:  pip install -r requirements.txt
+pandas>=2.0
+numpy>=1.24
+pyreadstat>=1.2      # lectura de archivos .sav (ERCE 2019, ENEMDU)
+openpyxl>=3.1        # lectura de .xlsx (SEDLAC)
+matplotlib>=3.7      # graficos
