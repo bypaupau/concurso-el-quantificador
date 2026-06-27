@@ -1,6 +1,6 @@
 # Calidad educativa y desigualdad estructural en Ecuador
 
-**Una visualización de datos para el concurso _Ecuador Cuantificado 2026_**
+**Una visualización de datos para el concurso _Ecuador Cuantificador 2026_**
 
 > ¿Cómo se compara la calidad de la educación de Ecuador con la de los países con mejor
 > desempeño educativo, y qué diferencias estructurales explican esa brecha?
@@ -13,7 +13,7 @@ internacionales, y genera ocho visualizaciones (carpeta [`figuras/`](figuras/)).
 
 ## El concurso
 
-_Ecuador Cuantificado 2026_ invita a crear una **visualización original sobre Ecuador** a partir
+_Ecuador Cuantificador 2026_ invita a crear una **visualización original sobre Ecuador** a partir
 de **datos verificables**, compartiendo los archivos necesarios para reproducir el análisis. No se
 premia solo un gráfico llamativo: se busca comunicar información relevante de forma **clara,
 transparente y basada en evidencia**.
@@ -26,8 +26,8 @@ transparente y basada en evidencia**.
 
 ## ¿Por qué esta pregunta?
 
-La calidad de la educación —cuánto **aprenden** realmente los estudiantes, no solo cuántos años
-asisten— es uno de los motores del desarrollo y de la movilidad social. En Ecuador ese aprendizaje
+La calidad de la educación, cuánto **aprenden** realmente los estudiantes, no solo cuántos años
+asisten; es uno de los motores del desarrollo y de la movilidad social. En Ecuador ese aprendizaje
 no se reparte de forma pareja: depende del nivel socioeconómico de la familia, del territorio y del
 tipo de escuela. Entender esas desigualdades, y dónde se ubica Ecuador frente a los países que más
 aprenden, es un primer paso para discutir políticas con evidencia.
@@ -41,9 +41,9 @@ niveles distintos, se usa **triangulación** (varias fuentes apuntando en la mis
 
 La exploración se organiza con tres relaciones, usadas como mapa de qué mirar:
 
-- **R1. Origen socioeconómico → Calidad** — ¿el nivel socioeconómico de la familia se asocia con el aprendizaje?
-- **R2. Educación → Oportunidades** — ¿el nivel educativo se asocia con el ingreso laboral?
-- **R3. Recursos → Resultados** (a nivel país) — ¿la inversión y el tamaño de las clases se asocian con el aprendizaje?
+- **R1. Origen socioeconómico - Calidad**: ¿el nivel socioeconómico de la familia se asocia con el aprendizaje?
+- **R2. Educación - Oportunidades**: ¿el nivel educativo se asocia con el ingreso laboral?
+- **R3. Recursos - Resultados** (a nivel país): ¿la inversión y el tamaño de las clases se asocian con el aprendizaje?
 
 ---
 
@@ -189,4 +189,3 @@ concurso-visualizador/
 
 ---
 
-_Elaboración propia. Datos de fuentes oficiales citadas. Análisis descriptivo y correlacional._
